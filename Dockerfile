@@ -2,10 +2,7 @@ FROM archlinux/base
 
 LABEL maintainer="Xiangpeng Hao <haoxiangpeng@hotmail.com>"
 
-WORKDIR /project
-
-RUN echo "*** Installing C++ Compilers ***" \
-  && pacman -Syy \
-  && pacman -S gcc clang cmake extra/openmp git
+RUN pacman -Syy \
+  && pacman -S make gcc clang cmake extra/openmp git --noconfirm
 
 ENTRYPOINT [ "/usr/bin/g++" ]
