@@ -4,7 +4,7 @@ LABEL maintainer="Xiangpeng Hao <haoxiangpeng@hotmail.com>"
 
 RUN echo "Server = https://mirrors.ocf.berkeley.edu/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist \
   && pacman -Syy \
-  && pacman -S numactl awk make pkg-config gcc clang cmake ndctl extra/openmp git --noconfirm \
+  && pacman -S numactl diffutils m4 pandoc rust awk make pkg-config gcc clang cmake ndctl extra/openmp git --noconfirm \
   && git clone https://github.com/pmem/pmdk.git \
   && cd pmdk \
   && make -j \
