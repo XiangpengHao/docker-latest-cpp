@@ -9,6 +9,3 @@ RUN echo "Server = https://mirrors.ocf.berkeley.edu/archlinux/\$repo/os/\$arch" 
   && cd pmdk \
   && make -j \
   && make install
-
-ENTRYPOINT [ "/usr/bin/g++" ]
-
